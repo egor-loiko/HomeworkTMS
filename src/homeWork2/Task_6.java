@@ -9,9 +9,8 @@ public class Task_6 {
     public static void main(String[] args) {
 
         //the first option
-        for (int i = 1; i < 100; i++) {
+        for (int i = 1; i < 100; i=i+2) {
             System.out.println(i);
-            i++;
         }
 
         //the second option

@@ -11,15 +11,12 @@ package homeWork2;
 public class Task_13 {
     public static void main(String[] args) {
         float initialAmount = 549f;
-        float finalAmount = 0f;
         float percent = 10f;
         int numberOfMonths = 10;
 
-
         for (int i = 0; i < numberOfMonths; i++) {
-            finalAmount = initialAmount + initialAmount * percent / 100;
-            initialAmount = finalAmount;
+            initialAmount = initialAmount + initialAmount * percent / 100;
         }
-        System.out.println("Final amount: " + finalAmount);
+        System.out.println("Final amount: " + initialAmount);
     }
 }
