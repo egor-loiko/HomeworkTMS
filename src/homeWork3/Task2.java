@@ -26,26 +26,23 @@ public class Task2 {
             }
         }
 
-        int[] finalArray = new int[initialArray.length - counterForDelete];
-
-        for (int i = 0; i < initialArray.length; i++) {
-            if (!helpArray[i]) {
-                finalArray[counterForFilling] = initialArray[i];
-                counterForFilling++;
-            }
-        }
-
         System.out.println("Initial array");
-        for (int elemet : initialArray) {
-            System.out.print(elemet + " ");
+        for (int element : initialArray) {
+            System.out.print(element + " ");
         }
 
         if (counterForDelete == 0) {
             System.out.println("\nNubmer " + valueForRemove + " is not present in the array");
         } else {
             System.out.println("\nFinal array");
-            for (int element : finalArray) {
-                System.out.print(element + " ");
+            int[] finalArray = new int[initialArray.length - counterForDelete];
+
+            for (int i = 0; i < initialArray.length; i++) {
+                if (!helpArray[i]) {
+                    finalArray[counterForFilling] = initialArray[i];
+                    System.out.print(finalArray[counterForFilling] + " ");
+                    counterForFilling++;
+                }
             }
         }
     }

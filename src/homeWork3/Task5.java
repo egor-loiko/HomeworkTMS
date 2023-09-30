@@ -51,24 +51,21 @@ public class Task5 {
             }
         }
 
-        int[] secondArray = new int[evenNumberCounter];
-
         System.out.println("Initial array:");
         for (int element : firstArray) {
             System.out.print(element + " ");
         }
 
-        for (int i = 0; i < firstArray.length; i++) {
-            if (helpArray[i]) {
-                secondArray[counterForFilling] = firstArray[i];
-                counterForFilling++;
-            }
-        }
-
         if (evenNumberCounter != 0) {
             System.out.println("\nFinal array of even numbers");
-            for (int element : secondArray) {
-                System.out.print(element + " ");
+            int[] secondArray = new int[evenNumberCounter];
+
+            for (int i = 0; i < firstArray.length; i++) {
+                if (helpArray[i]) {
+                    secondArray[counterForFilling] = firstArray[i];
+                    System.out.print(secondArray[counterForFilling] + " ");
+                    counterForFilling++;
+                }
             }
         } else {
             System.out.println("\nArray doesn't contain even numbers");

@@ -20,7 +20,7 @@ public class Task3 {
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * 100 + 1);
         }
-        for (double element : array) {
+        for (int element : array) {
             System.out.println(element);
         }
 

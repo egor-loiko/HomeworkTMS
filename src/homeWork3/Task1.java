@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Task1 {
     public static void main(String[] args) {
         int[] array = {1, 5, 8, 6, 11, 69, 1, 32, 8};
-        int counterForPrecense = 0;
+        boolean isNumberPresent = false;
         int searchValue = 0;
         boolean isNumberCaptured;
 
@@ -29,7 +29,8 @@ public class Task1 {
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] == searchValue) {
-                counterForPrecense++;
+                isNumberPresent=true;
+                break;
             }
         }
 
@@ -37,6 +38,6 @@ public class Task1 {
         for (int element : array) {
             System.out.print(element + " ");
         }
-        System.out.println(counterForPrecense == 0 ? "\nNumber " + searchValue + " is Not present in Array" : "\nNumber " + searchValue + " is present in Array");
+        System.out.println(isNumberPresent ? "\nNumber " + searchValue + " is present in Array" : "\nNumber " + searchValue + " is NOT present in Array");
     }
 }
