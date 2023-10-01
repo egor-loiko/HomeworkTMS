@@ -1,4 +1,4 @@
-package homeWork6;
+package homeWork6.task1;
 
 /*
 1. Создать класс CreditCard c полями номер счета, текущая сумма на счету.
