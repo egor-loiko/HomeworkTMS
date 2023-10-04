@@ -7,48 +7,48 @@ package homeWork4;
 */
 public class Task3 {
     public static void main(String[] args) {
-        int[][] a = {
+        int[][] firstArray = {
                 {1, 0, 0, 0},
                 {0, 1, 0, 0},
                 {0, 0, 0, 0}
         };
-        int[][] b = {
+        int[][] secondArray = {
                 {1, 2, 3},
                 {1, 1, 1},
                 {0, 0, 0},
                 {2, 1, 0}};
 
-        int[][] c = new int[a.length][b[0].length];
+        int[][] resultArray = new int[firstArray.length][secondArray[0].length];
 
         int sum = 0;
-        for (int k = 0; k < a.length; k++) {
-            for (int i = 0; i < a.length; i++) {
-                for (int j = 0; j < a[i].length; j++) {
-                    sum += a[k][j] * b[j][i];
+        for (int k = 0; k < firstArray.length; k++) {
+            for (int i = 0; i < firstArray.length; i++) {
+                for (int j = 0; j < firstArray[i].length; j++) {
+                    sum += firstArray[k][j] * secondArray[j][i];
                 }
-                c[k][i] = sum;
+                resultArray[k][i] = sum;
                 sum = 0;
             }
         }
 
         System.out.println("First matrix:");
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a[i].length; j++) {
-                System.out.print(a[i][j] + " ");
+        for (int i = 0; i < firstArray.length; i++) {
+            for (int j = 0; j < firstArray[i].length; j++) {
+                System.out.print(firstArray[i][j] + " ");
             }
             System.out.println();
         }
         System.out.println("Second matrix:");
-        for (int i = 0; i < b.length; i++) {
-            for (int j = 0; j < b[i].length; j++) {
-                System.out.print(b[i][j] + " ");
+        for (int i = 0; i < secondArray.length; i++) {
+            for (int j = 0; j < secondArray[i].length; j++) {
+                System.out.print(secondArray[i][j] + " ");
             }
             System.out.println();
         }
         System.out.println("Matrix multiplication AxB");
-        for (int i = 0; i < c.length; i++) {
-            for (int j = 0; j < c[i].length; j++) {
-                System.out.print(c[i][j] + " ");
+        for (int i = 0; i < resultArray.length; i++) {
+            for (int j = 0; j < resultArray[i].length; j++) {
+                System.out.print(resultArray[i][j] + " ");
             }
             System.out.println();
         }

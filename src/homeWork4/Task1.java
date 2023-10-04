@@ -16,7 +16,7 @@ public class Task1 {
                 {{48, 15, 9}, {45, 13, 6}, {9, 13, 5}}
         };
         int numberToIncease = 0;
-        boolean isNumberCaptured;
+        boolean isNumberCaptured = true;
 
         do {
             System.out.println("Enter an integer number");
@@ -26,7 +26,6 @@ public class Task1 {
                 isNumberCaptured = false;
             } else {
                 System.out.println("You entered an invalid value");
-                isNumberCaptured = true;
             }
         } while (isNumberCaptured);
 

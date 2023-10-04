@@ -10,7 +10,7 @@ public class Task5 {
     public static void main(String[] args) {
         int numberOfRows = 0;
         int numberOfColumns = 0;
-        boolean isNumberCaptured;
+        boolean isNumberCaptured = true;
 
         do {
             System.out.println("Enter number of rows");
@@ -20,7 +20,6 @@ public class Task5 {
                 isNumberCaptured = false;
             } else {
                 System.out.println("You entered an invalid value");
-                isNumberCaptured = true;
             }
         } while (isNumberCaptured);
 
