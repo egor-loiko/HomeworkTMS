@@ -1,4 +1,4 @@
-package homeWork8;
+package homeWork8.task1;
 
 public class DemoPhone {
     public static void main(String[] args) {
