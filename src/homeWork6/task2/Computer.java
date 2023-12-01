@@ -51,4 +51,27 @@ public class Computer {
     public void setHdd(HDD hdd) {
         this.hdd = hdd;
     }
+
+    @Override
+    public String toString() {
+        return "Computer information: " +
+                "\nComputer model: " + model +
+                "\nComputer price: " + price +
+                "\nRam name: " + ram.getName() +
+                "\nRam volume: " + ram.getVolume() +
+                "\nHDD volume: " + hdd.getName() +
+                "\nHDD volume: " + hdd.getVolume() +
+                "\nHDD volume: " + hdd.getType();
+    }
+
+    public void displayComputerInfo() {
+        System.out.println("Computer information: " +
+                "\nComputer model: " + model +
+                "\nComputer price: " + price +
+                "\nRam name: " + ram.getName() +
+                "\nRam volume: " + ram.getVolume() +
+                "\nHDD volume: " + hdd.getName() +
+                "\nHDD volume: " + hdd.getVolume() +
+                "\nHDD volume: " + hdd.getType());
+    }
 }

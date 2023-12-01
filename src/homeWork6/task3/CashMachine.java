@@ -68,12 +68,12 @@ public class CashMachine {
     boolean withdrawalMoney(int sum) {
         if (isWithdrawalPossibleWithExistingBanknotes(sum, 100)) {
             for (int i = 0; i < banknotesOptionsList.size(); i++) {
-                String[] test = banknotesOptionsList.get(i).split(" ");
+                String[] banknotesArray = banknotesOptionsList.get(i).split(" ");
                 int counterForWithdrawalBanknote100 = 0;
                 int counterForWithdrawalBanknote50 = 0;
                 int counterForWithdrawalBanknote20 = 0;
-                for (int j = 0; j < test.length; j++) {
-                    switch (test[j]) {
+                for (int j = 0; j < banknotesArray.length; j++) {
+                    switch (banknotesArray[j]) {
                         case "100":
                             counterForWithdrawalBanknote100++;
                             break;
