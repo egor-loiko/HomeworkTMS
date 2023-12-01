@@ -6,7 +6,7 @@ public class MyArrayList<T> {
 
     private T[] elements;
     private int size;
-    private static final int DEFAULT_CAPACITY = 10;
+    private static final int DEFAULT_CAPACITY = 3;
 
     public MyArrayList() {
         this.elements = (T[]) new Object[DEFAULT_CAPACITY];
