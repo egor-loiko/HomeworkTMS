@@ -23,6 +23,7 @@ public class Registr implements DocumentWork {
                 System.out.println("Document with No \"" + documentNo + " is found!");
                 documents[i].getFullDocumentInfo();
                 isDocumentFound = true;
+                break;
             }
         }
         if (!isDocumentFound) {

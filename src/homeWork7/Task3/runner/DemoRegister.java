@@ -34,6 +34,6 @@ public class DemoRegister {
         registr.saveDocument(doc10);
         registr.saveDocument(doc10);
         registr.getDocumentInfo("1232");
-        registr.getDocumentInfo("123");
+        registr.getDocumentInfo("ttt");
     }
 }

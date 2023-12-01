@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class DeliveryContract extends Document{
     private String type;
-    private int itemQty;
+    private int itemQuantity;
 
     public DeliveryContract() {
     }
@@ -13,14 +13,14 @@ public class DeliveryContract extends Document{
     public void getFullDocumentInfo() {
         System.out.println("Document No: " + getDocumentNo());
         System.out.println("Item type: " + getType());
-        System.out.println("Item quantity: " + getItemQty());
+        System.out.println("Item quantity: " + getItemQuantity());
         System.out.println("Document date: " + getDocumentDate());
     }
 
-    public DeliveryContract(String documentNo, Date documentDate, String type, int itemQty) {
+    public DeliveryContract(String documentNo, Date documentDate, String type, int itemQuantity) {
         super(documentNo, documentDate);
         this.type = type;
-        this.itemQty = itemQty;
+        this.itemQuantity = itemQuantity;
     }
 
     public String getType() {
@@ -31,11 +31,11 @@ public class DeliveryContract extends Document{
         this.type = type;
     }
 
-    public int getItemQty() {
-        return itemQty;
+    public int getItemQuantity() {
+        return itemQuantity;
     }
 
-    public void setItemQty(int itemQty) {
-        this.itemQty = itemQty;
+    public void setItemQuantity(int itemQuantity) {
+        this.itemQuantity = itemQuantity;
     }
 }
