@@ -2,14 +2,14 @@ package homeWork8.task2;
 
 public class Patient {
     private String name;
+
     private TreatmentPlan treatmentPlan;
 
-    public Patient(String name, TreatmentPlan treatmentPlan) {
+    public Patient(String name) {
         this.name = name;
-        this.treatmentPlan = treatmentPlan;
     }
 
-    public void assignDoctor() {
+    private void assignDoctor() {
         switch (treatmentPlan.getCode()) {
             case 1:
                 new Surgeon("Vasya", "sur", "Highest").cure(this);
@@ -22,6 +22,11 @@ public class Patient {
         }
     }
 
+    public void assignTreatmentPlan(TreatmentPlan treatmentPlan) {
+        this.treatmentPlan = treatmentPlan;
+        assignDoctor();
+    }
+
     public String getName() {
         return name;
     }
@@ -30,11 +35,4 @@ public class Patient {
         this.name = name;
     }
 
-    public TreatmentPlan getTreatmentPlan() {
-        return treatmentPlan;
-    }
-
-    public void setTreatmentPlan(TreatmentPlan treatmentPlan) {
-        this.treatmentPlan = treatmentPlan;
-    }
 }

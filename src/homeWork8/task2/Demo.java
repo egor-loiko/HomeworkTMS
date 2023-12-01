@@ -2,15 +2,14 @@ package homeWork8.task2;
 
 public class Demo {
     public static void main(String[] args) {
-        TreatmentPlan treatmentPlan = new TreatmentPlan(3);
+        TreatmentPlan treatmentPlan1 = new TreatmentPlan(1);
+        TreatmentPlan treatmentPlan2 = new TreatmentPlan(2);
+        TreatmentPlan treatmentPlan3 = new TreatmentPlan(3);
 
-        Patient patient = new Patient("Petya", treatmentPlan);
-        patient.assignDoctor();
+        Patient patient = new Patient("Petya");
 
-        treatmentPlan.setCode(2);
-        patient.assignDoctor();
-
-        treatmentPlan.setCode(1);
-        patient.assignDoctor();
+        patient.assignTreatmentPlan(treatmentPlan1);
+        patient.assignTreatmentPlan(treatmentPlan2);
+        patient.assignTreatmentPlan(treatmentPlan3);
     }
 }
