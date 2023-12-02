@@ -11,7 +11,7 @@ public class Dentist extends Doctor {
 
     @Override
     public void cure(Patient patient) {
-        System.out.println("Cure as Dentist!");
+        System.out.println("Cure patient " + patient.getName() + " as Dentist!");
     }
 
     public String getDentistSkill() {

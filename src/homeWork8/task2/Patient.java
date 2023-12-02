@@ -27,6 +27,11 @@ public class Patient {
         assignDoctor();
     }
 
+    public void changeTreatmentPlanCode(int code) {
+        this.treatmentPlan.setCode(code);
+        assignDoctor();
+    }
+
     public String getName() {
         return name;
     }
