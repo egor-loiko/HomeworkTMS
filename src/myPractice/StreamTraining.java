@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class streamTraining {
+public class StreamTraining {
   public static void main(String[] args) {
     int[] a = {2, 5, 6, 3, 9};
 
@@ -29,11 +29,11 @@ public class streamTraining {
 
     Updator upd = (str) -> str + "Hel";
 
-    list.stream().map(str -> str + " Help").collect(Collectors.toList()).forEach(System.out::println);
+    list.stream().map(str -> str + " Help").toList().forEach(System.out::println);
 
     list.stream().filter(x -> x.length() <= 3).limit(3).forEach(System.out::println);
 
-    System.out.println(list.stream().collect(Collectors.joining(", ")));
+    System.out.println(String.join(", ", list));
 
     Summator xyz = CalcTest::summ;
     System.out.println(xyz.summing(3, 4));
